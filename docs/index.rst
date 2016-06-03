@@ -1,16 +1,18 @@
-Using Kolibri
-=============
+User/Deployment Guide
+=====================
 
 If you're planning on using Kolibri, but you're not a developer, this is where you should look!
 We'll fill this in as we develop Kolibri more... we promise!
+
+To get a glimpse of what will happen, refer to :doc:`user_guide/index`.
 
 .. toctree::
    :maxdepth: 1
 
    user_guide/index
 
-For Developers
-==============
+Developer Guide
+===============
 
 .. include:: ../README.rst
 
@@ -20,13 +22,9 @@ For Developers
    :maxdepth: 1
 
    installation
-   dev/building
-   dev/plugins
-   dev/uap
-   dev/user_management
    cli
    contributing
+   dev/index
    authors
    changelog
-   todo
    modules
