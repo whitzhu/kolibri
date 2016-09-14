@@ -10,7 +10,7 @@
     @enter="submit"
     @back="startImportWizard"
   >
-    <div>
+    <div class="main">
       <p>Please enter a content channel ID:</p>
       <div>
         <input v-model="contentId" :disabled="wizardState.busy">
@@ -69,4 +69,13 @@
 </script>
 
 
-<style lang="stylus" scoped></style>
+<style lang="stylus" scoped>
+
+  @require '~core-theme.styl'
+
+  .main
+    text-align: center
+    margin-top: 2em
+
+
+</style>
