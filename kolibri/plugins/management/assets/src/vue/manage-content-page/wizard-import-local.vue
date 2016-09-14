@@ -13,6 +13,7 @@
     <div>
 
       <template v-if="!drivesLoading">
+        <div class="drives-loading">
         <p v-if="drivesWithData.length === 0">
           No drives with data were detected.
         </p>
@@ -39,6 +40,21 @@
           <h2 v-if="drivesWithData.length === 1">
             Drive detected with data: {{ drivesWithData[0].name }}
           </h2>
+          <template v-if="drivesWithData.length > 1">
+            <p>Drives detected with data:</p>
+            <div v-for="(index, drive) in drivesWithData">
+              <input
+                type="radio"
+                :id="'drive-'+index"
+                :value="drive.id"
+                v-model="selectedDrive"
+              >
+              <label :for="'drive-'+index">{{drive.name}} {{index}}</label>
+            </div>
+          </template>
+
+          <p class="note" v-if="drivesWithoutData.length">Note: {{drivesWithoutData.length}} additional drives were detected, but don't appear to have data on them.</p>
+        </div>
       </template>
       <loading-spinner v-else></loading-spinner>
 
