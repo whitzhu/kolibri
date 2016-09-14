@@ -125,6 +125,8 @@
   .main
     text-align: center
 
+  .drives-loading
+    margin: 2em 0
 
   .text-only-button
     margin: 1em
