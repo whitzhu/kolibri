@@ -13,11 +13,13 @@
 
   module.exports = {
     props: {
+      // text display next to icon
       text: {
         type: String,
         // why did we want this to be required?
         required: false,
       },
+      // text display underneath the icon
       bottomtext: {
         type: String,
         required: false,
