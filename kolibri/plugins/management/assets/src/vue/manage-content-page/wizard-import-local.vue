@@ -62,7 +62,7 @@
         Refresh
       </button>
 
-      <button @click="cancel" :disabled="wizardState.busy">
+      <button class="text-only-button" @click="cancel" :disabled="wizardState.busy">
         Cancel
       </button>
       <button @click="submit" :disabled="!canSubmit">
@@ -139,3 +139,9 @@
 
 
 <style lang="stylus" scoped></style>
+
+  .text-only-button
+    margin: 1em
+    color: $core-text-annotation
+    border: 1px $core-text-annotation solid
+
