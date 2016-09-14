@@ -38,9 +38,9 @@
       </template>
       <loading-spinner v-else></loading-spinner>
 
-      <button @click="updateWizardLocalDriveList" :disabled="wizardState.busy">
-        Refresh
-      </button>
+      <icon-button class="refresh" text="refresh" @click="updateWizardLocalDriveList" :disabled="wizardState.busy">
+        <svg src="../icons/refresh.svg"></svg>
+      </icon-button>
 
       <button class="text-only-button" @click="cancel" :disabled="wizardState.busy">
         Cancel
@@ -130,4 +130,8 @@
     margin: 1em
     color: $core-text-annotation
     border: 1px $core-text-annotation solid
+
+  .refresh
+    display: block
+    margin: 0 auto
 
