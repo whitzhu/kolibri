@@ -33,6 +33,7 @@
         </template>
 
         <p v-if="drivesWithoutData.length">Note: {{drivesWithoutData.length}} additional drives were detected, but don't appear to have data on them.</p>
+          <h2 class="core-text-alert" v-if="drivesWithData.length === 0">
       </template>
       <loading-spinner v-else></loading-spinner>
 
