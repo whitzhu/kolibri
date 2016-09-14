@@ -135,3 +135,7 @@
     display: block
     margin: 0 auto
 
+  .note
+    color: $core-text-annotation
+
+</style>
