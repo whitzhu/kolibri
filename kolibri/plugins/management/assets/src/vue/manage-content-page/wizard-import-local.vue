@@ -10,30 +10,10 @@
     @enter="submit"
     @back="startImportWizard"
   >
-    <div>
+    <div class="main">
 
       <template v-if="!drivesLoading">
         <div class="drives-loading">
-        <p v-if="drivesWithData.length === 0">
-          No drives with data were detected.
-        </p>
-        <p v-if="drivesWithData.length === 1">
-          Drive detected with data: {{ drivesWithData[0].name }}
-        </p>
-        <template v-if="drivesWithData.length > 1">
-          <p>Drives detected with data:</p>
-          <div v-for="(index, drive) in drivesWithData">
-            <input
-              type="radio"
-              :id="'drive-'+index"
-              :value="drive.id"
-              v-model="selectedDrive"
-            >
-            <label :for="'drive-'+index">{{drive.name}} {{index}}</label>
-          </div>
-        </template>
-
-        <p v-if="drivesWithoutData.length">Note: {{drivesWithoutData.length}} additional drives were detected, but don't appear to have data on them.</p>
           <h2 class="core-text-alert" v-if="drivesWithData.length === 0">
             No drives with data were detected.
           </h2>
@@ -138,7 +118,13 @@
 </script>
 
 
-<style lang="stylus" scoped></style>
+<style lang="stylus" scoped>
+
+  @require '~core-theme.styl'
+
+  .main
+    text-align: center
+
 
   .text-only-button
     margin: 1em
