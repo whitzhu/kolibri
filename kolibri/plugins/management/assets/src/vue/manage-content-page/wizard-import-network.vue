@@ -15,12 +15,14 @@
       <div>
         <input v-model="contentId" :disabled="wizardState.busy">
       </div>
-      <button @click="cancel" :disabled="wizardState.busy">
-        Cancel
-      </button>
-      <button @click="submit" :disabled="!canSubmit">
-        Import
-      </button>
+      <div class="button-wrapper">
+        <button class="text-only-button" @click="cancel" :disabled="wizardState.busy">
+          Cancel
+        </button>
+        <button @click="submit" :disabled="!canSubmit">
+          Import
+        </button>
+      </div>
     </div>
   </core-modal>
 
@@ -83,5 +85,14 @@
     border: 2px solid $core-action-normal
     border-radius: 4px
 
+  .button-wrapper
+    margin: 1em
+
+  button
+    margin: 0 0.2em
+
+  .text-only-button
+    color: $core-text-annotation
+    border: 2px $core-text-annotation solid
 
 </style>
