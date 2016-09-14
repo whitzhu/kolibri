@@ -70,6 +70,6 @@
   .text-only-buttons
     margin: 1em
     color: $core-text-annotation
-    border: 1px $core-text-annotation solid
+    border: 2px $core-text-annotation solid
 
 </style>
