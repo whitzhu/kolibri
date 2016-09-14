@@ -68,9 +68,6 @@
     text-align: center
 
   .text-only-buttons
-    height: 36px
-    padding-right: 2em
-    padding-left: 2em
     margin: 1em
     color: $core-text-annotation
     border: 1px $core-text-annotation solid
