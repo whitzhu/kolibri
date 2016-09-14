@@ -83,7 +83,6 @@
   @require '~core-theme.styl'
 
   .icon-button
-    padding-right: 8px
     height: 36px
 
   .btn-text
